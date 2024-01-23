@@ -1,0 +1,37 @@
+@page "/json"
+@inject HttpClient Http
+
+<PageTitle>JSON</PageTitle>
+
+<div>
+    <h1 class="display-4">JSON</h1><br>
+    <p>Här kan användning ses av inläsning av JSON-fil.</p>
+    <h2>Städer och året de grundades</h2>
+
+    @if (citiesList == null)
+    {
+        <p>Vänligen vänta medan städerna laddas in...</p>
+    }
+    else
+    {
+        @foreach (var city in citiesList!) 
+        { 
+            <p>@city.name - grundad @city.founded</p>
+        }
+    }
+</div>
+
+@code {
+    private CityClass[]? citiesList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        citiesList = await Http.GetFromJsonAsync<CityClass[]>("./sample-data/cities.json");
+    }
+
+    public class CityClass
+    {
+        public string name { get; set; }
+        public int founded { get; set; }
+    }
+}

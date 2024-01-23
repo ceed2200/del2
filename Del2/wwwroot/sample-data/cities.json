@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Stockholm",
+      "founded": 1252 
+    },
+    {
+        "name": "Göteborg",
+        "founded": 1621 
+    },
+    {
+        "name": "Malmö",
+        "founded": 1250
+    },
+    {
+        "name": "Uppsala",
+        "founded": 1296
+    },
+    {
+        "name": "Umeå",
+        "founded": 1622
+    }
+  ]
+  

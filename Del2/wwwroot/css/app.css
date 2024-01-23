@@ -1,0 +1,41 @@
+/* Del av lösning till uppgift 1.2 i kurs DT191G, skapad av Cecilia Edvardsson */
+
+/* CSS specifik för de olika sidorna */
+
+/* Allmänt */
+
+.content div h1 {
+  margin-bottom: 10px;
+}
+
+.content div h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Allmänt för liten upplösning */
+
+@media screen and (max-width: 650px) {
+  .content div {
+    margin: 70px auto;
+    width: 70%;
+    text-align: left;
+  }
+
+  .content div div {
+    margin: 0;
+  }
+}
+
+/* Specifikt för sidan Razor och för liten upplösning */
+
+@media screen and (max-width: 650px) {
+  .razor-content {
+    margin: auto;
+    width: 100%;
+  }
+
+  .razor-content div ul li {
+    text-align: left;
+  }
+}

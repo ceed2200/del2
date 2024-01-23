@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+    <header>
+       <a asp-area="" asp-page="/" href="/"><img src="./pic.png" alt="" /></a>
+    </header>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a class="nav-link text-black" asp-area="" asp-page="/" href="/">Start</a>
+                </li>
+                <li>
+                    <a class="nav-link text-black"  asp-area="" asp-page="/converter" href="/converter">Konvertering</a>
+                </li>
+                <li>
+                    <a class="nav-link text-black"  asp-area="" asp-page="/json" href="/json">JSON</a>
+                </li>
+            </ul>
+        </div>
+        <main class="content">
+            @Body
+        </main>
+    </div>
+    <footer>
+        <p>Webbplats skapad av Cecilia Edvardsson. <br>Kontakta mig via e-post <a href="mailto:ceed2200@student.miun.se">här</a></p>.
+    </footer>
